@@ -1,0 +1,17 @@
+﻿<Application
+    x:Class="VK_Widget_Parser.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VK_Widget_Parser">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ms-appx:///VK.VKUI/VKPalette.xaml"/>
+                <ResourceDictionary Source="ms-appx:///VK.VKUI/VKScheme.xaml"/>
+                <ResourceDictionary Source="ms-appx:///VK.VKUI/VKTypography.xaml"/>
+                <ResourceDictionary Source="ms-appx:///VK.VKUI/VKIcons.xaml"/>
+                <ResourceDictionary Source="ms-appx:///VK.VKUI/VKControlStyles.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

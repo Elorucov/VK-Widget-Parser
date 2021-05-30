@@ -1,0 +1,183 @@
+{
+        "mini_apps": [],
+        "games": [],
+        "profiles": [],
+        "groups": [],
+        "item": {
+          "type": "universal_informer",
+          "uid": "1_172894294_1",
+          "widget_id": "1",
+          "peer_id": "1_172894294",
+          "owner_id": "1_172894294",
+          "payload": {
+            "root_style": [
+              {
+                "left": {
+                  "size": "large",
+                  "image": {
+                    "type": "square",
+                    "vertical_align": "center"
+                  },
+                  "icon": {
+                    "vertical_align": "center"
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "color": "primary",
+                    "weight": "regular"
+                  },
+                  "subtitle": {
+                    "color": "secondary",
+                    "weight": "regular"
+                  },
+                  "second_subtitle": {
+                    "color": "secondary",
+                    "weight": "regular"
+                  },
+                  "vertical_align": "center"
+                },
+                "right": {
+                  "icon": {
+                    "color": "secondary",
+                    "vertical_align": "center"
+                  },
+                  "counter": {
+                    "color": "primary",
+                    "weight": "regular",
+                    "size": "large"
+                  }
+                }
+              }
+            ],
+            "header_title": "Баку",
+            "header_icon": [
+              {
+                "url": "https://vc.go.mail.ru/media/resources//weather_icons/6/png/vk_icon@1x.png",
+                "height": 56,
+                "width": 56
+              }
+            ],
+            "action": {
+              "type": "open_url",
+              "url": "https://vk.com/app7293255#country/3/city/3961"
+            },
+            "rows": [
+              {
+                "left": {
+                  "type": "icon",
+                  "payload": {
+                    "items": [
+                      {
+                        "url": "https://vc.go.mail.ru/media/resources//weather_icons/6/png/48-d@1x.png",
+                        "height": 56,
+                        "width": 56
+                      }
+                    ]
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "value": "[style font-weight=\"medium\"]Сейчас[/style]"
+                  },
+                  "subtitle": {
+                    "value": "Давление [style font-weight=\"medium\"]762 мм[/style]\nВетер [style font-weight=\"medium\"]2 м/с[/style]\nВлажность [style font-weight=\"medium\"]50%[/style]"
+                  }
+                },
+                "right": {
+                  "type": "counter",
+                  "payload": {
+                    "value": "24°"
+                  }
+                }
+              },
+              {
+                "left": {
+                  "type": "icon",
+                  "payload": {
+                    "items": [
+                      {
+                        "url": "https://vc.go.mail.ru/media/resources//weather_icons/6/png/7-d@1x.png",
+                        "height": 56,
+                        "width": 56
+                      }
+                    ]
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "value": "[style font-weight=\"medium\"]Утром[/style]"
+                  },
+                  "subtitle": {
+                    "value": "ясно"
+                  }
+                },
+                "right": {
+                  "type": "counter",
+                  "payload": {
+                    "value": "22°"
+                  }
+                }
+              },
+              {
+                "left": {
+                  "type": "icon",
+                  "payload": {
+                    "items": [
+                      {
+                        "url": "https://vc.go.mail.ru/media/resources//weather_icons/6/png/6-d@1x.png",
+                        "height": 56,
+                        "width": 56
+                      }
+                    ]
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "value": "[style font-weight=\"medium\"]Днём[/style]"
+                  },
+                  "subtitle": {
+                    "value": "переменная облачность"
+                  }
+                },
+                "right": {
+                  "type": "counter",
+                  "payload": {
+                    "value": "26°"
+                  }
+                }
+              },
+              {
+                "left": {
+                  "type": "icon",
+                  "payload": {
+                    "items": [
+                      {
+                        "url": "https://vc.go.mail.ru/media/resources//weather_icons/6/png/6-n@1x.png",
+                        "height": 56,
+                        "width": 56
+                      }
+                    ]
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "value": "[style font-weight=\"medium\"]Вечером[/style]"
+                  },
+                  "subtitle": {
+                    "value": "переменная облачность"
+                  }
+                },
+                "right": {
+                  "type": "counter",
+                  "payload": {
+                    "value": "20°"
+                  }
+                }
+              }
+            ]
+          },
+          "access_key": "7d0c1efbe3f0f2b4b3",
+          "updated_at": null
+        }
+      }

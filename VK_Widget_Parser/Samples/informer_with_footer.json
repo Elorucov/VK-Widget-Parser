@@ -1,0 +1,86 @@
+{
+        "mini_apps": [],
+        "games": [],
+        "profiles": [],
+        "groups": [],
+        "item": {
+          "type": "universal_informer",
+          "uid": "1_172894294_26",
+          "widget_id": "26",
+          "peer_id": "1_172894294",
+          "owner_id": "1_172894294",
+          "payload": {
+            "root_style": [
+              {
+                "left": {
+                  "size": "large",
+                  "image": {
+                    "type": "square",
+                    "vertical_align": "center"
+                  },
+                  "icon": {
+                    "color": "secondary",
+                    "vertical_align": "center"
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "color": "primary"
+                  },
+                  "subtitle": {
+                    "color": "secondary"
+                  },
+                  "vertical_align": "center"
+                }
+              }
+            ],
+            "action": {
+              "type": "open_url",
+              "url": "https://vk.com/tool42"
+            },
+            "footer": {
+              "payload": {
+                "action": {
+                  "type": "open_url",
+                  "url": "https://vk.com/tool42"
+                },
+                "title": {
+                  "value": "Открыть"
+                }
+              },
+              "type": "accent_button"
+            },
+            "rows": [
+              {
+                "left": {
+                  "type": "image",
+                  "payload": {
+                    "type": "inline",
+                    "items": [
+                      {
+                        "url": "https://sun1-87.userapi.com/impf/Zs2GQ0QcI6_vh6PHTAC5G4XwFVkpMw9WvgW8UQ/dkdFza-k-aA.jpg?size=139x139&quality=90&sign=507e7a5be52c6eed5deede0726552217&c_uniq_tag=sPqoNSl2rBbNtwuosNhQxROdofRc0vQMgKzmRwfc3pw&c_uniq_tag=2998241567",
+                        "height": 0,
+                        "width": 0
+                      }
+                    ]
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "value": "Tool 42"
+                  },
+                  "subtitle": {
+                    "value": "Те самые функции!"
+                  }
+                },
+                "action": {
+                  "type": "open_url",
+                  "url": "https://vk.com/tool42"
+                }
+              }
+            ]
+          },
+          "access_key": "fac1d9f298c221df54",
+          "updated_at": null
+        }
+      }

@@ -1,0 +1,72 @@
+{
+        "mini_apps": [],
+        "games": [],
+        "profiles": [],
+        "groups": [],
+        "item": {
+          "type": "universal_counter",
+          "uid": "1_172894294_30",
+          "widget_id": "30",
+          "peer_id": "1_172894294",
+          "owner_id": "1_172894294",
+          "payload": {
+            "root_style": {
+              "title": {
+                "color": "primary",
+                "weight": "medium"
+              },
+              "subtitle": {
+                "color": "secondary"
+              },
+              "order": "classic"
+            },
+            "header_title": "Курсы валют",
+            "header_icon": [
+              {
+                "url": "https://vc.go.mail.ru/media/resources//welcome_screen_icons/10/png/light/currency.png?c_uniq_tag=1276369058",
+                "height": 0,
+                "width": 0
+              },
+              {
+                "url": "https://vc.go.mail.ru/media/resources//welcome_screen_icons/10/png/dark/currency.png?c_uniq_tag=3947002899",
+                "height": 0,
+                "width": 0
+              }
+            ],
+            "items": [
+              {
+                "counter": {
+                  "value": "73,46"
+                },
+                "title": {
+                  "value": "рубля за доллар"
+                },
+                "subtitle": {
+                  "value": "Курс ЦБ на сегодня"
+                },
+                "action": {
+                  "type": "open_url",
+                  "url": "https://vk.com/currency"
+                }
+              },
+              {
+                "counter": {
+                  "value": "89,66"
+                },
+                "title": {
+                  "value": "рублей за евро"
+                },
+                "subtitle": {
+                  "value": "Курс ЦБ на сегодня"
+                },
+                "action": {
+                  "type": "open_url",
+                  "url": "https://vk.com/currency"
+                }
+              }
+            ]
+          },
+          "access_key": "5b82a40f50eb11040a",
+          "updated_at": null
+        }
+      }

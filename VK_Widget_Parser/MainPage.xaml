@@ -1,0 +1,38 @@
+﻿<Page
+    x:Class="VK_Widget_Parser.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:VK_Widget_Parser"
+    xmlns:storage="using:Windows.Storage"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource VKBackgroundContentBrush}" Loaded="LoadSamples">
+
+    <Grid Margin="8">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition MaxWidth="420" MinWidth="320"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="SamplesList" Style="{StaticResource VKComboBox}" Margin="8" HorizontalAlignment="Stretch" SelectionChanged="LoadSample">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate x:DataType="storage:StorageFile">
+                        <TextBlock Text="{x:Bind DisplayName}"/>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+            <TextBox x:Name="PlainText" Grid.Row="1" Style="{StaticResource VKTextBox}" Margin="8" TextWrapping="Wrap" FontFamily="Consolas" FontSize="13" IsSpellCheckEnabled="False" IsTextPredictionEnabled="False" PlaceholderText="Enter widget's JSON"/>
+            <Button Grid.Row="2" Style="{StaticResource VKButtonSecondaryLarge}" Margin="8" HorizontalAlignment="Stretch" Content="Render!" Click="Button_Click"/>
+        </Grid>
+        <Grid Grid.Column="1" Margin="8">
+            <TextBlock x:Name="ErrorInfo" Foreground="OrangeRed" TextWrapping="Wrap"/>
+            <Border x:Name="WidgetContainer" VerticalAlignment="Top" Background="{ThemeResource VKImBubbleIncomingBrush}" CornerRadius="18"/>
+        </Grid>
+    </Grid>
+</Page>

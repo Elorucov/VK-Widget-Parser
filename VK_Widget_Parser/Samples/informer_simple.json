@@ -1,0 +1,59 @@
+{
+        "mini_apps": [],
+        "games": [],
+        "profiles": [],
+        "groups": [],
+        "item": {
+          "type": "universal_informer",
+          "uid": "1_172894294_33",
+          "widget_id": "33",
+          "peer_id": "1_172894294",
+          "owner_id": "1_172894294",
+          "payload": {
+            "root_style": [
+              {
+                "left": {
+                  "size": "small",
+                  "image": {
+                    "type": "square",
+                    "vertical_align": "top"
+                  }
+                },
+                "middle": {
+                  "title": {
+                    "color": "primary",
+                    "weight": "regular"
+                  },
+                  "subtitle": {
+                    "color": "secondary"
+                  },
+                  "second_subtitle": {
+                    "color": "dynamic_blue"
+                  }
+                }
+              }
+            ],
+            "rows": [
+              {
+                "middle": {
+                  "title": {
+                    "value": "Где находится Дом Зинтера?"
+                  },
+                  "subtitle": {
+                    "value": "Дом Зингера находится в Петербурге, по адресу Невский проспект 28. Сегодня в доме Зингера находится головной офис ВКонтакте."
+                  },
+                  "second_subtitle": {
+                    "value": "\nvk.com"
+                  }
+                },
+                "action": {
+                  "type": "open_url",
+                  "url": "https://vk.com/"
+                }
+              }
+            ]
+          },
+          "access_key": "b7de7c2f7beb19e142",
+          "updated_at": null
+        }
+      }

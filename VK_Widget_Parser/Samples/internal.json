@@ -1,0 +1,44 @@
+{
+        "mini_apps": [],
+        "games": [],
+        "profiles": [],
+        "groups": [],
+        "item": {
+          "type": "universal_internal",
+          "uid": "1_172894294_6",
+          "widget_id": "6",
+          "peer_id": "1_172894294",
+          "owner_id": "1_172894294",
+          "payload": {
+            "root_style": {
+              "title": {
+                "color": "primary",
+                "weight": "regular"
+              },
+              "subtitle": {
+                "color": "secondary",
+                "weight": "regular"
+              }
+            },
+            "header_icon": [
+              {
+                "url": "https://go.mail.ru/static/es6/assets/images/vk-social-search/website.png?c_uniq_tag=527097096",
+                "height": 0,
+                "width": 0
+              }
+            ],
+            "title": {
+              "value": "Тест [style font-weight=\"medium\"]полужирного[/style] текста."
+            },
+            "subtitle": {
+              "value": "А также [style color=\"#F00\"]цветного[/style] текста, включая [style font-weight=\"medium\" color=\"accent\"]динамические[/style]"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://elor.top/"
+            }
+          },
+          "access_key": "d94c38fa374fa9382d",
+          "updated_at": null
+        }
+      }
