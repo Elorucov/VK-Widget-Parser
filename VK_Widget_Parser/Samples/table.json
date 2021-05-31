@@ -1,0 +1,163 @@
+﻿{
+  "mini_apps": [],
+  "games": [],
+  "profiles": [],
+  "groups": [],
+  "item": {
+    "type": "universal_table",
+    "uid": "1_172894294_36",
+    "widget_id": "36",
+    "peer_id": "1_172894294",
+    "owner_id": "1_172894294",
+    "payload": {
+      "root_style": {
+        "sizes": [
+          1,
+          2,
+          1
+        ],
+        "columns": [
+          {
+            "title": {
+              "color": "primary",
+              "weight": "medium"
+            },
+            "subtitle": {
+              "color": "secondary",
+              "weight": "regular"
+            },
+            "align": "left"
+          },
+          {
+            "title": {
+              "color": "accent",
+              "weight": "light"
+            },
+            "subtitle": {
+              "color": "dynamic_green",
+              "weight": "regular"
+            },
+            "align": "center"
+          },
+          {
+            "title": {
+              "color": "dynamic_orange",
+              "weight": "regular"
+            },
+            "subtitle": {
+              "color": "dynamic_violet",
+              "weight": "medium"
+            },
+            "align": "right"
+          }
+        ]
+      },
+      "items": [
+        [
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]1[/style]"
+            },
+            "subtitle": {
+              "value": "First"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://elor.top/"
+            }
+          },
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]2[/style]"
+            },
+            "subtitle": {
+              "value": "Second"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://ifx.su/"
+            }
+          },
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]3[/style]"
+            },
+            "subtitle": {
+              "value": "Third"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://sominemo.com/"
+            }
+          }
+        ],
+        [
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]4[/style]"
+            },
+            "subtitle": {
+              "value": "Fourth"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://elor.top/"
+            }
+          },
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]5[/style]"
+            },
+            "subtitle": {
+              "value": "Fifth"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://ifx.su/"
+            }
+          },
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]6[/style]"
+            },
+            "subtitle": {
+              "value": "Sixth"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://sominemo.com/"
+            }
+          }
+        ],
+        [
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]7[/style]"
+            },
+            "subtitle": {
+              "value": "Seventh"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://elor.top/"
+            }
+          },
+          {
+            "title": {
+              "value": "[style font-weight=\"medium\"]8[/style]"
+            },
+            "subtitle": {
+              "value": "Test"
+            },
+            "action": {
+              "type": "open_url",
+              "url": "https://ifx.su/"
+            }
+          }
+        ]
+      ]
+    },
+    "access_key": "b9222944a3d55fd277",
+    "updated_at": null
+  }
+}

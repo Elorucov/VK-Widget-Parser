@@ -17,6 +17,8 @@ namespace VK_Widget_Parser {
                     return BuildInformer(widget.Item.Payload);
                 case "universal_counter":
                     return BuildCounter(widget.Item.Payload);
+                case "universal_table":
+                    return BuildTable(widget.Item.Payload);
                 case "universal_internal":
                     return BuildInternal(widget.Item.Payload);
                 default:
@@ -103,6 +105,46 @@ namespace VK_Widget_Parser {
 
             container.Padding = new Thickness(0, needTopPadding ? 6 : 0, 0, needBottomPadding ? 6 : 0);
             return WrapToActionButton(container, (JObject)payload["action"]);
+        }
+
+        private static FrameworkElement BuildTable(JObject payload) {
+            var styles = payload["root_style"];
+            var sizes = (JArray)styles["sizes"];
+            var items = (JArray)payload["items"];
+
+            int columns = sizes.Count;
+            int rows = items.Count;
+
+            Grid grid = new Grid();
+
+            foreach (int columnSize in sizes) {
+                grid.ColumnDefinitions.Add(new ColumnDefinition() { 
+                    Width = new GridLength(columnSize, GridUnitType.Star) 
+                });
+            }
+
+            int row = 0;
+            foreach (var rowItem in items) {
+                int column = 0;
+                grid.RowDefinitions.Add(new RowDefinition() {
+                    Height = GridLength.Auto
+                });
+                foreach (var columnItem in rowItem) {
+                    bool isFirstColumn = column == 0;
+                    bool isLastColumn = column == columns - 1;
+
+                    var cell = BuildTableCellElement((JObject)columnItem, styles["columns"][column]);
+                    cell.Margin = new Thickness(isFirstColumn ? 12 : 4, 4, isLastColumn ? 12 : 4, 6);
+                    cell = WrapToActionButton(cell, (JObject)columnItem["action"]);
+
+                    Grid.SetColumn(cell, column);
+                    Grid.SetRow(cell, row);
+                    grid.Children.Add(cell);
+                    column++;
+                }
+                row++;
+            }
+            return grid;
         }
 
         private static FrameworkElement BuildInternal(JObject payload) {
@@ -300,6 +342,30 @@ namespace VK_Widget_Parser {
 
         #endregion
 
+        #region Table-specific
+
+        private static FrameworkElement BuildTableCellElement(JObject item, JToken style) {
+            string title = String.Empty, subtitle = String.Empty;
+            if (item.ContainsKey("title")) title = item["title"]["value"].Value<string>();
+            if (item.ContainsKey("subtitle")) subtitle = item["subtitle"]["value"].Value<string>();
+
+            StackPanel cell = new StackPanel();
+            cell.VerticalAlignment = ParseVerticalAlignment(style["vertical_align"], VerticalAlignment.Center);
+            if (!String.IsNullOrEmpty(title)) {
+                TextBlock ttb = ParseText(title, style["title"], 16);
+                ttb.TextAlignment = ParseTextAlignment(style["align"]);
+                cell.Children.Add(ttb);
+            }
+            if (!String.IsNullOrEmpty(subtitle)) {
+                TextBlock stb = ParseText(subtitle, style["subtitle"], 13);
+                stb.TextAlignment = ParseTextAlignment(style["align"]);
+                cell.Children.Add(stb);
+            }
+            return cell;
+        }
+
+        #endregion
+
         private static FrameworkElement WrapToActionButton(FrameworkElement element, JObject action) {
             if (action != null && action["type"].Value<string>() == "open_url") {
                 Button button = new Button {
@@ -332,6 +398,16 @@ namespace VK_Widget_Parser {
 ";
             TextBlock tb = XamlReader.Load(xaml) as TextBlock;
             return tb;
+        }
+
+        private static TextAlignment ParseTextAlignment(JToken alignment, TextAlignment defaultAlignment = TextAlignment.Left) {
+            if (alignment == null) return defaultAlignment;
+            switch (alignment.Value<string>()) {
+                case "left": return TextAlignment.Left;
+                case "center": return TextAlignment.Center;
+                case "right": return TextAlignment.Right;
+                default: return defaultAlignment;
+            }
         }
 
         private static VerticalAlignment ParseVerticalAlignment(JToken alignment, VerticalAlignment defaultAlignment = VerticalAlignment.Stretch) {
