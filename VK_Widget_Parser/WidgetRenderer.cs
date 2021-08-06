@@ -43,7 +43,8 @@ namespace VK_Widget_Parser {
 
             if (payload.ContainsKey("rows")) {
                 foreach (var row in payload["rows"]) {
-                    container.Children.Add(BuildWidgetInformerRow((JObject)row, rootStyle));
+                    // Иногда в row может оказаться пустой массив вместо объекта. Хорошо, что не false...
+                    if (row is JObject rowobj) container.Children.Add(BuildWidgetInformerRow(rowobj, rootStyle));
                 }
             }
 
