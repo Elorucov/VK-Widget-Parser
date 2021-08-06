@@ -465,6 +465,10 @@ namespace VK_Widget_Parser {
                 plain = plain.Replace(match.Value, ParseStyle(match));
             }
             plain = plain.Replace("\n", "<LineBreak/>");
+            plain = plain.Replace("&", "&amp;");
+            plain = plain.Replace("\"", "&quot;");
+            plain = plain.Replace(">", "&gt;");
+            plain = plain.Replace("<", "&lt;");
             return plain;
         }
 
