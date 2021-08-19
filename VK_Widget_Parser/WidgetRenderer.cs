@@ -460,15 +460,14 @@ namespace VK_Widget_Parser {
 
         private static string ParseStyledTextForXaml(string plain) {
             var matches = styleRegex.Matches(plain);
+            plain = plain.Replace("&", "&amp;");
+            plain = plain.Replace(">", "&gt;");
+            plain = plain.Replace("<", "&lt;");
+            plain = plain.Replace("\n", "<LineBreak/>");
 
             foreach (Match match in matches) {
                 plain = plain.Replace(match.Value, ParseStyle(match));
             }
-            plain = plain.Replace("\n", "<LineBreak/>");
-            plain = plain.Replace("&", "&amp;");
-            plain = plain.Replace("\"", "&quot;");
-            plain = plain.Replace(">", "&gt;");
-            plain = plain.Replace("<", "&lt;");
             return plain;
         }
 
